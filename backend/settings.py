@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f=gowi&d_--0xf*!=y@sp6$2r_&@z3)g$1wxj*=s$db@nmi8n*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'articles-api-django-rest.herokuapp.com']
 
 
 # Application definition
@@ -78,10 +78,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd14c10acr11mjl',
+        'HOST': 'ec2-52-86-177-34.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'dbsefgrndbollk',
+        'PASSWORD': '1e1f70cbeed5d11163199fdc90543aecb633aa16155f2a054413e2395f407109',
     }
 }
 
